@@ -346,7 +346,6 @@ span {
 /* FIX: Prevent last item from getting clipped */
 .portfolio-box:last-child {
     margin-right: 2rem;
-    
 }
 
 

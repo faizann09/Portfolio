@@ -242,7 +242,6 @@ span {
 }
 
 
-/* Portfolio section */
 .portfolio {
     background: var(--second-bg-color);
 }
@@ -251,27 +250,25 @@ span {
     margin-bottom: 4rem;
 }
 
-/* Horizontal scroll container */
-.portfolio-container {
+/* Updated .container for horizontal scrolling */
+.container {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    flex-wrap: nowrap;             /* prevent wrapping */
+    overflow-x: auto;              /* horizontal scroll */
     gap: 2rem;
     padding: 1rem 2rem;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    width: 100vw;             /* Full screen width */
-    box-sizing: border-box;
+    scrollbar-width: none;         /* Firefox */
 }
 
-.portfolio-container::-webkit-scrollbar {
-    display: none;
+.container::-webkit-scrollbar {
+    display: none;                 /* Chrome, Safari, Edge */
 }
 
-/* Portfolio boxes */
+/* Portfolio boxes fixed size and horizontal scrollable */
 .portfolio-box {
-    flex: 0 0 auto;
-    width: 26rem;             /* Increased size */
+    flex: 0 0 auto;                /* prevent shrinking */
+    width: 22rem;
     position: relative;
     border-radius: 1.5rem;
     box-shadow: 0 0 1rem var(--bg-color);
@@ -287,7 +284,7 @@ span {
 
 .portfolio-box img {
     width: 100%;
-    height: 18rem;            /* Larger height */
+    height: 14rem;
     object-fit: cover;
     transition: 0.5s ease;
 }
@@ -296,14 +293,13 @@ span {
     transform: scale(1.1);
 }
 
-/* Portfolio overlay layer */
 .portfolio-box .portfolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -343,11 +339,6 @@ span {
     color: var(--second-bg-color);
 }
 
-/* FIX: Prevent last item from getting clipped */
-.portfolio-box:last-child {
-    margin-right: 2rem;
-    
-}
 
 
 .contact h2 {

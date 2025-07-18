@@ -11,8 +11,7 @@ menuIcon.onclick = () => {
 
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
-document.querySelector('.container').scrollLeft = 10000;
-
+ console.log(document.querySelectorAll('.portfolio-box').length); // Should log 7
 
 window.onscroll = () => {
   sections.forEach((sec) => {
